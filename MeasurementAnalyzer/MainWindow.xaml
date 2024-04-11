@@ -1,0 +1,19 @@
+﻿<dx:ThemedWindow 
+    x:Class="MeasurementAnalyzer.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:Views="clr-namespace:MeasurementAnalyzer.Views"
+    Title="" Height="650" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Views:GraphView x:Name="graphView" Grid.Row="0"/>
+        <StackPanel x:Name="stcButtonHolder" Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <Button x:Name="btnLoadNewDataSet" Content="Select another file" Margin="20" Width="250" Height="30" Click="btnLoadNewDataSet_Click"/>
+            <Button x:Name="btnExportFilteredDataSet" Content="Export Filtered Dataset" Margin="20" Width="250" Height="30" Click="btnExportFilteredDataSet_Click"/>
+        </StackPanel>
+    </Grid>
+</dx:ThemedWindow>
